@@ -7,6 +7,7 @@ export class HomePage extends BasePage{
     private readonly headers: Locator;
     private readonly search: Locator;
     private readonly searchIcon: Locator;
+    private readonly username: Locator;
    
     // const.. of the class : init the locators
     // only one const.. can be created its a rule of TS
@@ -17,6 +18,7 @@ export class HomePage extends BasePage{
            this.headers=page.getByRole('heading',{level:2});
            this.search=page.getByRole('textbox',{name:'Search'});
            this.searchIcon=page.locator ('div#search button');
+           this.username=page.getByRole('link',{name:'username'});
             
     };
 
